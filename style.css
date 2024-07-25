@@ -242,16 +242,18 @@ span {
   border-radius: 25px;
 }
 
-.run-img {
-  width: 28%;
-  height: 400px;
-  border-radius: 20px;
-}
 .run-section .run-img {
-  background-image: url("./images/run.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  width: 30%;
+  height: 370px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+.run-section .run-img img {
+  position: absolute;
+  top: 80%;
+  left: 5%;
+  transform: translate(-50%, -50%);
 }
 /*Pricing section*/
 .price-card-text {
@@ -731,9 +733,14 @@ hr {
     flex-direction: column;
     padding: 1rem;
   }
-  .run-img {
-    width: 95%;
+  .run-section .run-img {
+    width: 100%;
     height: 200px;
+  }
+  .run-section .run-img img {
+    top: 50%;
+    left: 50%;
+    width: 100%;
   }
   .run-text,
   .pricing-text {
@@ -863,14 +870,20 @@ hr {
   .run-section {
     padding: 1rem;
   }
-  .run-img {
-    width: 40%;
-    height: 300px;
+  .run-section .run-img {
+    width: 50%;
+  }
+  .run-section .run-img img {
+    top: 50%;
+    left: -5%;
+    height: 70vh;
+    transform: translate(-45%, -40%);
   }
   .run-text {
-    width: 60%;
+    width: 50%;
   }
   .pricing-card {
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 1.5rem;
     padding: 2rem 0;
@@ -947,7 +960,7 @@ hr {
   }
 }
 /*For Large Device*/
-@media screen and (min-width: 992px) and (max-width: 1280px) {
+@media screen and (min-width: 992px) and (max-width: 1200px) {
   .header-section,
   .container,
   .bmi-container {
@@ -968,7 +981,7 @@ hr {
   .training-text,
   .bmi-text,
   .pricing-text {
-    width: 60%;
+    width: 70%;
     padding: 1.5rem 0;
   }
   .habit-text h1,
@@ -987,9 +1000,11 @@ hr {
   .run-section {
     padding: 1rem;
   }
-  .run-img {
-    width: 40%;
-    height: 300px;
+  .run-section .run-img {
+    width: 50%;
+  }
+  .run-section .run-img img {
+    transform: translate(-50%, -50%);
   }
   .run-text {
     width: 50%;
@@ -998,6 +1013,7 @@ hr {
     font-size: 2rem;
   }
   .pricing-card {
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 2rem;
     padding: 2rem 0;
@@ -1018,5 +1034,24 @@ hr {
   .activity {
     width: 100%;
     padding: 15px;
+  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .run-text,
+  .run-section .run-img {
+    width: 50%;
+  }
+  .pricing-text {
+    width: 90%;
+  }
+  .pricing-card {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .pricing-card .price-card:hover {
+    transform: scale(1.05);
+  }
+  .pricing-text .btn-div {
+    width: 30%;
   }
 }
