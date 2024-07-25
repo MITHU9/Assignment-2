@@ -5,6 +5,7 @@
   --primary-color: #e6533c;
   --nav-text-color: #fff;
   --para-color: rgba(255, 255, 255, 0.5);
+  --price-card-color: #097fd9;
 }
 * {
   padding: 0;
@@ -37,7 +38,7 @@ p {
   padding: 2rem 2rem 0 2rem;
 }
 section {
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
 }
 /*Header Section*/
 .navbar {
@@ -181,7 +182,8 @@ span {
   padding: 3.5rem 1rem;
 }
 .habit-text h1,
-.team-text h2 {
+.team-text h2,
+.pricing-text h2 {
   font-size: 3rem;
   font-weight: 900;
   margin-bottom: 1rem;
@@ -229,7 +231,8 @@ span {
   padding: 0.7rem 0;
 }
 .run-section .join-btn,
-.btn {
+.btn,
+.price-card-btn {
   background: var(--primary-color);
   color: #fff;
   padding: 0.8rem 3.5rem;
@@ -249,6 +252,76 @@ span {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+/*Pricing section*/
+.price-card-text {
+  color: #fff;
+  list-style: none;
+  line-height: 2rem;
+  padding: 1rem 0;
+}
+.pricing-text {
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+}
+.pricing-text h3 {
+  font-size: 1rem;
+  color: var(--primary-color);
+}
+.pricing-text .btn-div {
+  width: 40%;
+  margin: 0 auto;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--primary-color);
+}
+.pricing-text .btn-div .bill-btn {
+  background: transparent;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 2.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.pricing-text .btn-div #bg-color {
+  background: var(--primary-color);
+}
+.pricing-card {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 3rem 1rem;
+  gap: 2rem;
+}
+.pricing-card .price-card {
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  background: #252525;
+  transition: all 0.3s ease-in-out;
+}
+.price-card h4 {
+  color: var(--primary-color);
+}
+.price-card h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 1rem 0 0.2rem 0;
+}
+#bg-primary {
+  background: var(--primary-color);
+}
+#bg-primary h4 {
+  color: #fff;
+}
+#bg-primary .price-card-btn {
+  background: #000;
+}
+.pricing-card .price-card:hover {
+  transform: scale(1.1);
+  box-shadow: 8px 8px 8px rgba(66, 65, 65, 0.9);
 }
 /*Training Section*/
 .training-text,
@@ -597,7 +670,8 @@ hr {
   .run-text h2,
   .training-text h2,
   .bmi-text h2,
-  .team-text h2 {
+  .team-text h2,
+  .pricing-text h2 {
     font-size: 2rem;
     margin-bottom: 0.5rem;
     line-height: 2.4rem;
@@ -661,14 +735,32 @@ hr {
     width: 95%;
     height: 200px;
   }
-  .run-text {
+  .run-text,
+  .pricing-text {
     width: 95%;
     padding: 0.5rem;
   }
   .run-section .join-btn {
     width: 100%;
   }
-
+  .pricing-card {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem 0;
+  }
+  .pricing-card .price-card:hover {
+    transform: scale(1.03);
+  }
+  .price-card-btn {
+    margin: 0;
+  }
+  .pricing-text .btn-div {
+    width: 62%;
+  }
+  .pricing-text .btn-div .bill-btn {
+    padding: 0.5rem 1.5rem;
+  }
   .training-img {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -778,10 +870,22 @@ hr {
   .run-text {
     width: 60%;
   }
+  .pricing-card {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 2rem 0;
+  }
+  .pricing-card .price-card:hover {
+    transform: scale(1.05);
+  }
+  .pricing-text .btn-div {
+    width: 40%;
+  }
   .habit-text,
   .training-text,
   .bmi-text,
-  .team-text {
+  .team-text,
+  .pricing-text {
     width: 90%;
     padding: 1rem 0;
     margin: 0;
@@ -862,7 +966,8 @@ hr {
   }
   .habit-text,
   .training-text,
-  .bmi-text {
+  .bmi-text,
+  .pricing-text {
     width: 60%;
     padding: 1.5rem 0;
   }
@@ -891,6 +996,17 @@ hr {
   }
   .run-text h2 {
     font-size: 2rem;
+  }
+  .pricing-card {
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+  .pricing-card .price-card:hover {
+    transform: scale(1.05);
+  }
+  .pricing-text .btn-div {
+    width: 50%;
   }
   .bmi-container {
     justify-content: space-between;
