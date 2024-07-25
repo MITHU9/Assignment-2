@@ -320,7 +320,7 @@ span {
   background: #000;
 }
 .pricing-card .price-card:hover {
-  transform: scale(1.1);
+  transform: scale(1.06);
   box-shadow: 8px 8px 8px rgba(66, 65, 65, 0.9);
 }
 /*Training Section*/
