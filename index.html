@@ -333,18 +333,20 @@
                 regardless of income or access to a gym.
               </p>
             </div>
-            <div class="bmi-input">
+            <form action="#" class="bmi-input">
               <input class="height" type="text" placeholder="Height/cm" />
               <input class="weight" type="text" placeholder="Weight/kg" />
               <input class="age" type="text" placeholder="Age" />
               <select class="gender">
-                <option value="Sex">Sex</option>
+                <option value="" disabled selected>Sex</option>
               </select>
               <select class="activity">
-                <option value="activity">Select an activity factor</option>
+                <option value="" disabled selected>
+                  Select an activity factor
+                </option>
               </select>
-            </div>
-            <button class="btn">Calculate</button>
+              <button class="btn">Calculate</button>
+            </form>
           </div>
         </div>
       </section>
