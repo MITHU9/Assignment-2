@@ -161,10 +161,10 @@ span {
   padding: 0.3rem 0;
 }
 .hero-text-overlay {
-  max-width: 200px;
+  min-width: 160px;
   color: #fff;
   background-color: rgba(66, 65, 65, 0.5);
-  padding: 1rem 1.5rem;
+  padding: 0.7rem 1.5rem;
   border-radius: 10px;
   position: absolute;
   top: 24%;
@@ -722,9 +722,8 @@ hr {
     font-size: 1.5rem;
   }
   .hero-text-overlay {
-    width: 145px;
     top: 50px;
-    right: 5px;
+    right: 0;
   }
   .habits-card,
   .team-img,
@@ -894,7 +893,6 @@ hr {
     width: 50%;
   }
   .pricing-card {
-    justify-content: space-between;
     flex-wrap: wrap;
     gap: 1.5rem;
     padding: 2rem 0;
@@ -1052,6 +1050,10 @@ hr {
   .run-text,
   .run-section .run-img {
     width: 50%;
+  }
+  .hero-text,
+  .training-text {
+    width: 60%;
   }
   .pricing-text {
     width: 90%;
