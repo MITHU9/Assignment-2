@@ -14,7 +14,7 @@
   font-family: "Inter", sans-serif;
 }
 header {
-  background-image: var(--bg-gradient);
+  background: var(--bg-gradient);
 }
 body {
   background: #000000;
