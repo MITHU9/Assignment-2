@@ -63,8 +63,8 @@ section {
 }
 #orange {
   background: var(--primary-color);
-  padding: 0.4rem 1rem;
-  border-radius: 20px;
+  padding: 0.5rem 1.3rem;
+  border-radius: 18px;
 }
 #hide {
   display: none;
